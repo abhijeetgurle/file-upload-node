@@ -1,7 +1,7 @@
-const express = require("express");
-const fileupload = require("express-fileupload");
-const cors = require("cors");
-const bodyParser = require("body-parser");
+import express from 'express';
+import fileupload from 'express-fileupload';
+import cors from 'cors';
+import bodyParser from 'body-parser';
 
 const app = express();
 
