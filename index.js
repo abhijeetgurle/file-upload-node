@@ -1,9 +1,11 @@
-const express = require("express");
-const fileupload = require("express-fileupload");
-const cors = require("cors");
-const bodyParser = require("body-parser");
+import express from 'express';
+import fileupload from 'express-fileupload';
+import cors from 'cors';
+import bodyParser from 'body-parser';
 
 const app = express();
+
+const PORT = 4000;
 
 app.use(cors());
 app.use(fileupload());
@@ -18,6 +20,6 @@ app.post("/upload", (req, res) => {
   res.send("OK");
 });
 
-app.listen(4000, () => {
-  console.log("Server running successfully on 3000");
+app.listen(PORT, () => {
+  console.log(`Server running successfully on ${PORT}`);
 });
