@@ -5,6 +5,8 @@ const bodyParser = require("body-parser");
 
 const app = express();
 
+const PORT = 4000;
+
 app.use(cors());
 app.use(fileupload());
 app.use(express.static("files"));
@@ -18,6 +20,6 @@ app.post("/upload", (req, res) => {
   res.send("OK");
 });
 
-app.listen(4000, () => {
-  console.log("Server running successfully on 3000");
+app.listen(PORT, () => {
+  console.log(`Server running successfully on ${PORT}`);
 });
